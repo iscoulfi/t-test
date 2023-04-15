@@ -8,3 +8,8 @@ export interface CardData {
   latitude: number;
   longitude: number;
 }
+
+export interface IOption {
+  label: string;
+  value: string;
+}
