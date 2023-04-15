@@ -13,3 +13,14 @@ export interface IOption {
   label: string;
   value: string;
 }
+
+export interface EditCardProps extends CardData {
+  show: boolean;
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export type Inputs = {
+  name: string;
+  model: string;
+  price: number;
+};

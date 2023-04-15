@@ -2,6 +2,7 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 import { Status, VehiclesState } from './types';
 import { getVehicles } from './asyncActions';
+import { CardData } from '../../../types/appInterface';
 
 const initialState: VehiclesState = {
   cards: [],
@@ -14,6 +15,12 @@ export const vehiclesSlice = createSlice({
   reducers: {
     removeCard: (state, action: PayloadAction<number>) => {
       state.cards = state.cards.filter((item) => item.id !== action.payload);
+    },
+    editCard: (state, action: PayloadAction<CardData>) => {
+      state.cards = [
+        ...state.cards.filter((item) => item.id !== action.payload.id),
+        action.payload,
+      ];
     },
   },
 
@@ -32,5 +39,5 @@ export const vehiclesSlice = createSlice({
   },
 });
 
-export const { removeCard } = vehiclesSlice.actions;
+export const { removeCard, editCard } = vehiclesSlice.actions;
 export default vehiclesSlice.reducer;

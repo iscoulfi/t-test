@@ -24,7 +24,7 @@ const VehicleCard = (props: CardData) => {
           <span className="text-muted">Price:</span> {props.price}
         </ListGroup.Item>
       </ListGroup>
-      <ButtonGroup id={props.id} />
+      <ButtonGroup {...props} />
     </Card>
   );
 };
