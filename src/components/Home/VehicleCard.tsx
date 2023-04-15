@@ -1,6 +1,7 @@
+import { CardData } from '../../types/appInterface';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import { CardData } from '../types/appInterface';
+import ButtonGroup from './ButtonGroup';
 
 const VehicleCard = (props: CardData) => {
   return (
@@ -23,6 +24,7 @@ const VehicleCard = (props: CardData) => {
           <span className="text-muted">Price:</span> {props.price}
         </ListGroup.Item>
       </ListGroup>
+      <ButtonGroup id={props.id} />
     </Card>
   );
 };

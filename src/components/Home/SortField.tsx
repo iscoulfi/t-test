@@ -1,7 +1,7 @@
 import Select, { SingleValue } from 'react-select';
-import { IOption } from '../types/appInterface';
+import { IOption } from '../../types/appInterface';
 import Form from 'react-bootstrap/Form';
-import options from '../assets/options';
+import options from '../../assets/options';
 
 interface SortFieldProps {
   currentField: string;

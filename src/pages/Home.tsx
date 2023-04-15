@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../redux/store';
 import { getVehicles } from '../redux/slices/vehicles/asyncActions';
 import { useSortData } from '../hooks/useSortData';
-import VehicleCard from '../components/VehicleCard';
+import VehicleCard from '../components/Home/VehicleCard';
 import MoonLoader from 'react-spinners/MoonLoader';
-import SortField from '../components/SortField';
+import SortField from '../components/Home/SortField';
 
 const Home = () => {
   const [sortValue, setSortValue] = useState('yearAsc');
