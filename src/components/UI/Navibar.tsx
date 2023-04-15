@@ -1,5 +1,16 @@
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+
 const Navibar = () => {
-  return <div>Navibar</div>;
+  return (
+    <>
+      <Navbar bg="light" sticky="top">
+        <Container>
+          <Navbar.Brand>T-test</Navbar.Brand>
+        </Container>
+      </Navbar>
+    </>
+  );
 };
 
 export default Navibar;
